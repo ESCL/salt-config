@@ -1,0 +1,21 @@
+Vagrant.configure("2") do |config|
+  ## Choose your base box
+  config.vm.box = "ubuntu/trusty64"
+
+  ## For masterless, mount your salt file root
+  # config.vm.synced_folder "salt/roots/", "/srv/salt/"
+
+  ## Forward port for web access
+  config.vm.network "forwarded_port", guest: 80, host: 10080
+
+  ## Use all the defaults:
+  config.vm.provision :salt do |salt|
+
+    salt.minion_config = "minion"
+    salt.run_highstate = true
+
+    # Debug bootstrap, salt-minion is not starting properly...
+    salt.bootstrap_options = "-D"
+
+  end
+end

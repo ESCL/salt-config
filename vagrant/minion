@@ -1,0 +1,17 @@
+# Salt minion configuration
+
+# URL of salt master (fqdn or ip)
+master: 
+
+# Minion id
+id: 
+
+# Path to keys provided by admin (relative to Vagrantfile)
+minion_key: key.pem
+minion_pub: key.pub
+
+# Grains for minion (env and roles)
+grains:
+  env: 
+  roles: []
+

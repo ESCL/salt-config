@@ -1,0 +1,17 @@
+# Salt minion configuration
+
+# Master is host machine
+master: 10.0.2.2
+
+# Minion id
+id: guest-test
+
+# Keys
+minion_key: key.pem
+minion_pub: key.pub
+
+# Grains for minion
+grains:
+  env: dev
+  roles:
+    - webserver

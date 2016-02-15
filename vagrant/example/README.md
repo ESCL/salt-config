@@ -1,0 +1,1 @@
+This is an example use of Salt with Vagrant.
