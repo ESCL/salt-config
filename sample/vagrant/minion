@@ -4,7 +4,7 @@
 master: 10.0.2.2
 
 # Minion id
-id: guest-test
+id: vagrant-test
 
 # Keys
 minion_key: key.pem
