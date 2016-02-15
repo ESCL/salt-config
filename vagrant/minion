@@ -6,7 +6,7 @@ master:
 # Minion id
 id: 
 
-# Path to keys provided by admin (relative to Vagrantfile)
+# Path to keys provided by admin (drop them in this directory)
 minion_key: key.pem
 minion_pub: key.pub
 
@@ -14,4 +14,3 @@ minion_pub: key.pub
 grains:
   env: 
   roles: []
-
