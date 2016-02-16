@@ -1,4 +1,4 @@
 
 Host bitbucket.org
 StrictHostKeyChecking no
-IdentityFile /home/ubuntu/.ssh/id_rsa
+IdentityFile {{ pillar['auth']['home'] }}/.ssh/id_rsa

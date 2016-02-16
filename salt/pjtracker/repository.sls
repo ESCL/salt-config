@@ -7,8 +7,8 @@ include:
 pjtracker-repo-checkout:
   cmd.run:
     - name: git checkout -- .
-    - cwd: /home/ubuntu/apps/tracker
-    - user: ubuntu
+    - cwd: {{ pillar['app']['root'] }}
+    - user: {{ pillar['auth']['user'] }}
     - require:
       - pkg: git
 
@@ -16,8 +16,8 @@ pjtracker-repo-checkout:
 pjtracker-repo-protocol:
   cmd.run:
     - name: git remote set-url origin 'git+ssh://git@bitbucket.org/escng/tracker.git'
-    - cwd: /home/ubuntu/apps/tracker
-    - user: ubuntu
+    - cwd: {{ pillar['app']['root'] }}
+    - user: {{ pillar['auth']['user'] }}
     - require:
       - pkg: git
 
@@ -25,8 +25,8 @@ pjtracker-repo-protocol:
 pjtracker-repo-pull:
   cmd.run:
     - name: git pull
-    - cwd: /home/ubuntu/apps/tracker
-    - user: ubuntu
+    - cwd: {{ pillar['app']['root'] }}
+    - user: {{ pillar['auth']['user'] }}
     - require:
       - pkg: git
       - file: ssh-config
@@ -39,9 +39,9 @@ pjtracker-repo-pull:
 #  git.latest:
 #    - name: 'git+ssh://git@bitbucket.org/escng/tracker.git'
 #    - rev: master
-#    - target: /home/ubuntu/apps/tracker
+#    - target: {{ pillar['app']['root'] }}
 #    - force_checkout: true
-#    - user: ubuntu
+#    - user: {{ pillar['auth']['user'] }}
 #    - require:
 #      - file: ssh-config
 #      - ssh_known_hosts: ssh-bitbucket-host

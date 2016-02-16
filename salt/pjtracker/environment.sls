@@ -7,19 +7,19 @@ include:
 
 pjtracker-virtualenv:
   virtualenv.managed:
-    - name: /home/ubuntu/.virtualenvs/pjtracker
+    - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker
     - python: /usr/bin/python3
     - system_site_packages: False
-    - user: ubuntu
+    - user: {{ pillar['auth']['user'] }}
     - require:
       - file: virtualenvs-directory
 
 pjtracker-requirements:
   pip.installed:
-    - bin_env: /home/ubuntu/.virtualenvs/pjtracker
-    - cwd: /home/ubuntu
+    - bin_env: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker
+    - cwd: {{ pillar['auth']['home'] }}
     - no_chown: true
-    - requirements: /home/ubuntu/apps/tracker/requirements/prod-cpython.txt
+    - requirements: {{ pillar['app']['root'] }}/requirements/prod-cpython.txt
     - require:
       - cmd: pip-update
       - cmd: pjtracker-repo-pull

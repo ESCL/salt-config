@@ -1,20 +1,20 @@
 # Init/reload uwsgi application server
 
 include:
-  - app.setup
+  - pjtracker.setup
 
 uwsgi-logdir:
   file.directory:
     - name: /var/log/uwsgi
-    - user: ubuntu
+    - user: {{ pillar['auth']['user'] }}
     - recurse:
       - user
 
 uwsgi-run:
   cmd.run:
-    - name: /home/ubuntu/.virtualenvs/pjtracker/bin/uwsgi --ini tracker/uwsgi.ini
-    - cwd: /home/ubuntu/apps/tracker
-    - user: ubuntu
+    - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/uwsgi --ini tracker/uwsgi.ini
+    - cwd: {{ pillar['app']['root'] }}
+    - user: {{ pillar['auth']['user'] }}
     - unless: test -e /tmp/uwsgi-fifo
     - require:
       - cmd: django-migrate
@@ -23,8 +23,8 @@ uwsgi-run:
 uwsgi-reload:
   cmd.run:
     - name: echo r > /tmp/uwsgi-fifo
-    - cwd: /home/ubuntu/apps/tracker
-    - user: ubuntu
+    - cwd: {{ pillar['app']['root'] }}
+    - user: {{ pillar['auth']['user'] }}
     - onlyif: test -e /tmp/uwsgi-fifo
     - require:
       - cmd: django-migrate

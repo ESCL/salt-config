@@ -1,16 +1,16 @@
 # Salt minion configuration
 
 # URL of salt master (fqdn or ip)
-master: 
+master:
 
 # Minion id
-id: 
+id:
 
 # Path to keys provided by admin (drop them in this directory)
 minion_key: key.pem
 minion_pub: key.pub
 
-# Grains for minion (env and roles)
+# Grains for minion (env and app)
 grains:
-  env: 
-  roles: []
+  env:
+  app:

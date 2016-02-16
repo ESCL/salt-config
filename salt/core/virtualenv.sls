@@ -17,9 +17,9 @@ virtualenvwrapper:
 
 virtualenvs-directory:
   file.directory:
-    - name: /home/ubuntu/.virtualenvs
-    - user: ubuntu
-    - group: ubuntu
+    - name: {{ pillar['auth']['home'] }}/.virtualenvs
+    - user: {{ pillar['auth']['user'] }}
+    - group: {{ pillar['auth']['group'] }}
     - dir_mode: 755
     - require:
       - pip: virtualenvwrapper
