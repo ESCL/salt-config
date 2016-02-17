@@ -6,6 +6,9 @@ Vagrant.configure("2") do |config|
   ## Ports forwarded: http
   config.vm.network "forwarded_port", guest: 80, host: 10080
 
+  ## Synced folders
+  config.vm.synced_folder "../..", "/home/vagrant/repos"
+
   ## Provisioner: salt
   config.vm.provision :salt do |salt|
 
