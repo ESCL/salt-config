@@ -35,7 +35,7 @@ include:
 #      - cmd: pjtracker-repo-protocol
 
 # Broken in current version (https://github.com/saltstack/salt/issues/28287)?
-pjtracker-repo-pull:
+pjtracker-repo:
   git.latest:
     - name: {{ pillar['app']['repository']['url'] }}
     - rev: master

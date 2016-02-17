@@ -22,6 +22,6 @@ pjtracker-requirements:
     - requirements: {{ pillar['app']['root'] }}/requirements/prod-cpython.txt
     - require:
       - cmd: pip-update
-      - cmd: pjtracker-repo-pull
+      - git: pjtracker-repo
       - pkg: pgsql-install
       - virtualenv: pjtracker-virtualenv
