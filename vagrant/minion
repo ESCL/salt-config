@@ -1,16 +1,16 @@
 # Salt minion configuration
 
 # URL of salt master (fqdn or ip)
-master:
+master: ec2-54-86-200-199.compute-1.amazonaws.com
 
 # Minion id
-id:
+id: dev-kako
 
-# Path to keys provided by admin (drop them in this directory)
+# Path to keys provided by admin (extract them in this directory)
 minion_key: key.pem
 minion_pub: key.pub
 
 # Grains for minion (env and app)
 grains:
-  env:
-  app:
+  env: dev
+  app: pjtracker

@@ -1,7 +1,7 @@
 # Run required django commands before deployment
 
 include:
-  - app.environment
+  - pjtracker.environment
 
 django-logdir:
   file.directory:

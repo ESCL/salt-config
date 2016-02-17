@@ -2,8 +2,8 @@
 
 include:
   - core.virtualenv
-  - app.dependencies
-  - app.repository
+  - pjtracker.dependencies
+  - pjtracker.repository
 
 pjtracker-virtualenv:
   virtualenv.managed:
