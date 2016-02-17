@@ -1,7 +1,7 @@
 app:
   name: pjtracker
-  root: /home/vagrant/repos/tracker
-  static_root: /home/vagrant/repos/tracker/static
+  root: /home/vagrant/apps/tracker
+  static_root: /home/vagrant/apps/tracker/static
 
   repository:
     url: 'git+ssh://git@bitbucket.org/escng/tracker.git'

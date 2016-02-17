@@ -1,7 +1,7 @@
 app:
   name: pjtracker
-  root: /home/ubuntu/repos/tracker
-  static_root: /home/ubuntu/repos/tracker/static
+  root: /home/ubuntu/apps/tracker
+  static_root: /home/ubuntu/apps/tracker/static
 
   repository:
     url: 'git+ssh://git@bitbucket.org/escng/tracker.git'
