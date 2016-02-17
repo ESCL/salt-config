@@ -1,7 +1,11 @@
 app:
   name: pjtracker
-  root: /home/ubuntu/apps/tracker
-  static_root: /home/ubuntu/apps/tracker/static
+  root: /home/ubuntu/repos/tracker
+  static_root: /home/ubuntu/repos/tracker/static
+
+  repository:
+    url: 'git+ssh://git@bitbucket.org/escng/tracker.git'
+    checkout: true
 
   ports:
     upstream: 8000
