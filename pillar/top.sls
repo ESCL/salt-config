@@ -7,6 +7,10 @@ base:
     - match: compound
     - auth.ec2
 
+  'G@roles:qua':
+    - match: compound
+    - sonar
+
   'G@env:dev and G@app:pjtracker':
     - match: compound
     - pjtracker.dev
