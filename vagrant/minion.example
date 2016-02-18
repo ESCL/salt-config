@@ -4,9 +4,10 @@
 master: salt.pjtracker.com
 
 # Minion id
-id: dev-kako
+id: dev-test1
 
 # Grains for minion (env and app)
 grains:
   env: dev
+  box_type: vagrant
   app: pjtracker
