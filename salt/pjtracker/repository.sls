@@ -8,7 +8,7 @@ include:
 pjtracker-repo:
   git.latest:
     - name: {{ pillar['app']['repository']['url'] }}
-    - target: {{ pillar['app']['root'] }}
+    - target: {{ pillar['auth']['home'] }}/{{ pillar['app']['root'] }}
     - force_checkout: {{ pillar['app']['repository']['checkout'] }}
     - user: {{ pillar['auth']['user'] }}
     - require:

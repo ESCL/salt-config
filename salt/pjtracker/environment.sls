@@ -19,7 +19,7 @@ pjtracker-requirements:
     - bin_env: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker
     - cwd: {{ pillar['auth']['home'] }}
     - no_chown: true
-    - requirements: {{ pillar['app']['root'] }}/requirements/prod-cpython.txt
+    - requirements: {{ pillar['auth']['home'] }}/{{ pillar['app']['root'] }}/requirements/prod-cpython.txt
     - require:
       - cmd: pip-update
       - git: pjtracker-repo
