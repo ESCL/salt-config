@@ -1,5 +1,6 @@
 app:
   name: pjtracker
+  settings: 'tracker.settings.dev'
   root: /home/vagrant/apps/tracker
   static_root: /home/vagrant/apps/tracker/static
 
@@ -10,5 +11,3 @@ app:
   ports:
     upstream: 8000
     downstream: 80
-
-  db: {}

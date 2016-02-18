@@ -12,7 +12,7 @@ django-logdir:
 
 django-migrate:
   cmd.run:
-    - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/python manage.py migrate --noinput --settings=tracker.settings.prod
+    - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/python manage.py migrate --noinput --settings={{ pillar['app']['settings'] }}
     - cwd: {{ pillar['app']['root'] }}
     - user: {{ pillar['auth']['user'] }}
     - require:
@@ -21,7 +21,7 @@ django-migrate:
 
 django-collectstatic:
   cmd.run:
-    - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/python manage.py collectstatic --noinput --settings=tracker.settings.prod
+    - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/python manage.py collectstatic --noinput --settings={{ pillar['app']['settings'] }}
     - cwd: {{ pillar['app']['root'] }}
     - user: {{ pillar['auth']['user'] }}
     - require:

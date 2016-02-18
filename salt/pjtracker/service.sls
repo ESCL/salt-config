@@ -12,7 +12,7 @@ uwsgi-logdir:
 
 uwsgi-run:
   cmd.run:
-    - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/uwsgi --ini tracker/uwsgi.ini
+    - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/uwsgi --ini tracker/uwsgi.ini --DJANGO_SETTINGS_MODULE={{ pillar['app']['settings'] }}
     - cwd: {{ pillar['app']['root'] }}
     - user: {{ pillar['auth']['user'] }}
     - unless: test -e /tmp/uwsgi-fifo
