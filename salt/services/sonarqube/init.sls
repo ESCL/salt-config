@@ -30,10 +30,19 @@ sonar-db:
     - require:
       - postgres_user: sonar-user
 
+sonar-config:
+  file.managed:
+    - name: /opt/sonarqube-5.3/conf/sonar.properties
+    - source: salt://services/sonar/sonar.properties
+    - template: jinja
+
 sonar:
   cmd.run:
-    - name: /opt/sonarqube-5.3/bin/linux-x86-64/sonar.sh start
+    - name: /opt/sonarqube-5.3/bin/linux-x86-64/sonar.sh restart
     - require:
       - archive: sonar-install
       - postgres_user: sonar-user
       - postgres_database: sonar-db
+   - watch:
+      - file: sonar-config
+

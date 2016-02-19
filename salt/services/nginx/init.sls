@@ -4,6 +4,12 @@ nginx-install:
   pkg.installed:
     - name: nginx
 
+nginx-config:
+  file.managed:
+    - name: /etc/nginx/nginx.conf
+    - source: salt://services/nginx/nginx.conf
+    - template: jinja
+
 nginx:
   service.running:
     - require:
@@ -11,8 +17,3 @@ nginx:
     - watch:
       - file: nginx-config
 
-nginx-config:
-  file.managed:
-    - name: /etc/nginx/nginx.conf
-    - source: salt://services/nginx/nginx.conf
-    - template: jinja
