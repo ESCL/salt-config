@@ -43,6 +43,5 @@ sonar:
       - archive: sonar-install
       - postgres_user: sonar-user
       - postgres_database: sonar-db
-   - watch:
-      - file: sonar-config
+
 
