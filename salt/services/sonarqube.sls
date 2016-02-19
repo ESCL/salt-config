@@ -30,10 +30,10 @@ sonar-db:
     - require:
       - postgres_user: sonar-user
 
-#sonar:
-#  cmd.run:
-#    - name: /opt/sonarqube-5.3/
-#    - require:
-#      - archive: sonar-install
-#      - postgres_user: sonar-user
-#      - postgres_database: sonar-db
+sonar:
+  cmd.run:
+    - name: /opt/sonarqube-5.3/bin/linux-x86-64/sonar.sh start
+    - require:
+      - archive: sonar-install
+      - postgres_user: sonar-user
+      - postgres_database: sonar-db
