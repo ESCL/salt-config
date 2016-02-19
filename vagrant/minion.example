@@ -11,3 +11,4 @@ grains:
   env: dev
   box_type: vagrant
   app: pjtracker
+  roles: []

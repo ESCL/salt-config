@@ -11,5 +11,13 @@ base:
   # pjtracker app boxes, nginx and app service
   'G@app:pjtracker':
     - match: compound
-    - services.nginx
     - pjtracker.service
+    - services.nginx
+
+  'G@roles:ci':
+    - match: compound
+    - services.jenkins
+
+  'G@roles:qua':
+    - match: compound
+    - services.sonarqube

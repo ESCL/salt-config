@@ -2,7 +2,7 @@
 
 include:
   - core.virtualenv
-  - pjtracker.dependencies
+  - services.postgresql
   - pjtracker.repository
 
 pjtracker-virtualenv:
