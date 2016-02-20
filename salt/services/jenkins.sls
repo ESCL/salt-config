@@ -16,7 +16,7 @@ jenkins-install:
 # SSH private key required to pull repositories
 jenkins-identity-file:
   file.managed:
-    - name: /var/jenkins/.ssh/id_rsa
+    - name: /var/lib/jenkins/.ssh/id_rsa
     - user: jenkins
     - mode: 600
     - source: salt://core/ssh/id_rsa
@@ -26,7 +26,7 @@ jenkins-identity-file:
 # SSH public key required to pull repositories
 jenkins-public-key:
   file.managed:
-    - name: /var/jenkins/.ssh/id_rsa.pub
+    - name: /var/lib/jenkins/.ssh/id_rsa.pub
     - user: jenkins
     - mode: 600
     - source: salt://core/ssh/id_rsa.pub
