@@ -13,6 +13,14 @@ jenkins-install:
   pkg.installed:
     - name: jenkins
 
+# Ensure jenkins user can "sudo" (to allow executing salt)
+jenkins-user:
+  user.present:
+    - name: jenkins
+    - groups: sudo
+    - require:
+      - pkg: jenkins-install
+
 # SSH private key required to pull repositories
 jenkins-identity-file:
   file.managed:
