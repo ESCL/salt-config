@@ -10,8 +10,8 @@ sonar-scanner-download:
 
 sonar-scanner-install:
   archive.extracted:
-    - name: /opt/sonar-scanner-2.5
-    - source: file:/{{ pillar['auth']['home'] }}/sonar-scanner-2.5.zip
+    - name: /opt/
+    - source: {{ pillar['auth']['home'] }}/sonar-scanner-2.5.zip
     - archive_format: zip
     - if_missing: /opt/sonar-scanner-2.5
     - user: root
