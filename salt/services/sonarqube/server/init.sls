@@ -4,7 +4,7 @@ include:
   - services.postgresql
   - core.unzip
 
-sonar-install:
+sonar-server-install:
   archive.extracted:
     - name: /opt/
     - source: https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-5.3.zip
@@ -30,17 +30,17 @@ sonar-db:
     - require:
       - postgres_user: sonar-user
 
-sonar-config:
+sonar-server-config:
   file.managed:
     - name: /opt/sonarqube-5.3/conf/sonar.properties
-    - source: salt://services/sonarqube/sonar.properties
+    - source: salt://services/sonar/server/sonar.properties
     - template: jinja
 
-sonar:
+sonar-server:
   cmd.run:
     - name: /opt/sonarqube-5.3/bin/linux-x86-64/sonar.sh restart
     - require:
-      - archive: sonar-install
+      - archive: sonar-server-install
       - postgres_user: sonar-user
       - postgres_database: sonar-db
 

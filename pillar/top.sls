@@ -7,7 +7,7 @@ base:
     - match: compound
     - auth.ec2
 
-  'G@roles:qua':
+  'G@roles:qua or G@roles:ci':
     - match: compound
     - sonar
 
