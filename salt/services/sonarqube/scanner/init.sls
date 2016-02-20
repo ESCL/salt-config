@@ -5,7 +5,7 @@ include:
 
 sonar-scanner-download:
   cmd.run:
-    - name: curl -L https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-2.5.zip -o {{ pillar['auth']['home'] }}
+    - name: curl -L https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-2.5.zip -o {{ pillar['auth']['home'] }}/sonar-scanner-2.5.zip
     - creates: {{ pillar['auth']['home'] }}/sonar-scanner-2.5.zip
 
 sonar-scanner-install:
