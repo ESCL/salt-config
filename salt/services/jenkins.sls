@@ -17,7 +17,8 @@ jenkins-install:
 jenkins-user:
   user.present:
     - name: jenkins
-    - groups: sudo
+    - groups:
+      - sudo
     - require:
       - pkg: jenkins-install
 
