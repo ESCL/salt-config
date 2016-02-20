@@ -17,8 +17,8 @@ base:
   'G@roles:ci':
     - match: compound
     - services.jenkins
-    - services.sonar.scanner
+    - services.sonarqube.scanner
 
   'G@roles:qua':
     - match: compound
-    - services.sonar.server
+    - services.sonarqube.server

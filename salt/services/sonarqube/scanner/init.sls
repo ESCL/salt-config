@@ -16,7 +16,7 @@ sonar-scanner-install:
 sonar-scanner-config:
   file.managed:
     - name: /opt/sonar-scanner-2.5/conf/sonar-runner.properties
-    - source: salt://services/sonar/scanner/sonar-runner.properties
+    - source: salt://services/sonarqube/scanner/sonar-runner.properties
     - template: jinja
 
 sonar-scanner-bin:

@@ -33,7 +33,7 @@ sonar-db:
 sonar-server-config:
   file.managed:
     - name: /opt/sonarqube-5.3/conf/sonar.properties
-    - source: salt://services/sonar/server/sonar.properties
+    - source: salt://services/sonarqube/server/sonar.properties
     - template: jinja
 
 sonar-server:
