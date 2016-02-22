@@ -5,7 +5,7 @@ app:
   static_root: apps/tracker/static
 
   repository:
-    url: 'git+ssh://git@bitbucket.org/escng/tracker.git'
+    url: 'git@github.com:ESCL/salt-config.git'
     checkout: false
 
   ports:
