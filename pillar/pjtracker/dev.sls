@@ -5,7 +5,7 @@ app:
   static_root: apps/pjtracker/static
 
   repository:
-    url: 'git@github.com:ESCL/salt-config.git'
+    url: 'git@github.com:ESCL/pjtracker.git'
     checkout: false
 
   ports:
