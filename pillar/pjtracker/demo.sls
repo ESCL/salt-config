@@ -1,8 +1,8 @@
 app:
   name: pjtracker
   settings: 'tracker.settings.demo'
-  root: apps/tracker
-  static_root: apps/tracker/static
+  root: apps/pjtracker
+  static_root: apps/pjtracker/static
 
   repository:
     url: 'git@github.com:ESCL/salt-config.git'
