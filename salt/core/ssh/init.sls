@@ -22,12 +22,12 @@ ssh-public-key:
     - require:
       - file: ssh-directory
 
-ssh-bitbucket-host:
+ssh-github-host:
   ssh_known_hosts:
     - present
-    - name: 'bitbucket.org'
+    - name: 'github.com'
     - user: {{ pillar['auth']['user'] }}
-    - fingerprint: 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40
+    - fingerprint: 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
     - require:
       - file: ssh-directory
 

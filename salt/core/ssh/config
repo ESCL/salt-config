@@ -1,4 +1,4 @@
 
-Host bitbucket.org
+Host github.com
 StrictHostKeyChecking no
 IdentityFile {{ pillar['auth']['home'] }}/.ssh/id_rsa
