@@ -1,11 +1,11 @@
 app:
   name: pjtracker
   settings: 'tracker.settings.demo'
-  root: apps/tracker
-  static_root: apps/tracker/static
+  root: apps/pjtracker
+  static_root: apps/pjtracker/static
 
   repository:
-    url: 'git+ssh://git@bitbucket.org/escng/tracker.git'
+    url: 'git@github.com:ESCL/pjtracker.git'
     checkout: true
 
   ports:
