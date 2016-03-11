@@ -37,11 +37,11 @@ sonar-server-config:
     - template: jinja
 
 sonar-server:
-  cmd.run:
+  cmd.wait:
     - name: /opt/sonarqube-5.3/bin/linux-x86-64/sonar.sh restart
+    - watch:
+      - file: sonar-server-config
     - require:
       - archive: sonar-server-install
       - postgres_user: sonar-user
       - postgres_database: sonar-db
-
-
