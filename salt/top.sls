@@ -22,3 +22,7 @@ base:
   'G@roles:qua':
     - match: compound
     - services.sonarqube.server
+
+  'G@roles:mail':
+    - match: compound
+    - services.postfix
