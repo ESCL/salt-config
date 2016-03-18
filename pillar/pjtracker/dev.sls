@@ -11,3 +11,5 @@ app:
   ports:
     upstream: 8000
     downstream: 80
+
+  secure: false
