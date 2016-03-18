@@ -12,3 +12,4 @@ app:
     upstream: 8000
     downstream: 80
 
+  safe_protocol: true
