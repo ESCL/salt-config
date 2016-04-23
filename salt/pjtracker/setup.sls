@@ -13,6 +13,10 @@ django-logdir:
 django-migrate:
   cmd.run:
     - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/python manage.py migrate --noinput --settings={{ pillar['app']['settings'] }}
+    - env:
+    {% for key, value in pillar['db'].iteritems() %}
+      - 'DB_{{ key.upper() }}': '{{ value }}'
+    {% endfor %}
     - cwd: {{ pillar['auth']['home'] }}/{{ pillar['app']['root'] }}
     - user: {{ pillar['auth']['user'] }}
     - require:
@@ -22,6 +26,10 @@ django-migrate:
 django-collectstatic:
   cmd.run:
     - name: {{ pillar['auth']['home'] }}/.virtualenvs/pjtracker/bin/python manage.py collectstatic --noinput --settings={{ pillar['app']['settings'] }}
+    - env:
+    {% for key, value in pillar['db'].iteritems() %}
+      - 'DB_{{ key.upper() }}': '{{ value }}'
+    {% endfor %}
     - cwd: {{ pillar['auth']['home'] }}/{{ pillar['app']['root'] }}
     - user: {{ pillar['auth']['user'] }}
     - require:
