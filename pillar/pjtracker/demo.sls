@@ -14,3 +14,4 @@ app:
 
   secure: true
 
+db: {}
