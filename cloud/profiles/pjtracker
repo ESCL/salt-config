@@ -1,0 +1,21 @@
+pjtracker-demo:
+  provider: ec2-public-wwww
+  size: t2.micro
+  grains:
+    app: pjtracker
+    env: demo
+
+pjtracker-desicon:
+  provider: ec2-public-wwww
+  size: t2.micro
+  grains:
+    app: pjtracker
+    env: desicon
+
+
+pjtracker-shared:
+  provider: ec2-public-www
+  size: t2.medium
+  grains:
+    app: pjtracker
+    env: shared
