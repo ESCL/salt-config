@@ -11,10 +11,18 @@ base:
     - match: compound
     - sonar
 
-  'G@env:dev and G@app:pjtracker':
+  'G@app:pjtracker and G@env:dev':
     - match: compound
     - pjtracker.dev
 
-  'G@env:demo and G@app:pjtracker':
+  'G@app:pjtracker and G@env:demo':
     - match: compound
     - pjtracker.demo
+
+  'G@app:pjtracker and G@env:shared':
+    - match: compound
+    - pjtracker.shared
+
+  'G@app:pjtracker and G@env:desicon':
+    - match: compound
+    - pjtracker.desicon

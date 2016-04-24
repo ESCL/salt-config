@@ -1,0 +1,45 @@
+
+ec2-public-www:
+  # Driver
+  driver: ec2
+
+  # OS (Ubuntu 14.04)
+  image: ami-d05e75b8
+
+  # Salt master host
+  minion:
+    master: salt.pjtracker.com
+
+  # Grains information, which will be common for all nodes using this provider
+  grains:
+    box_type: ec2
+
+  # Specify whether to use public or private IP for deploy script
+  ssh_interface: public_ips
+
+  # Security settings
+  ssh_username: ubuntu
+  securitygroup: web-server
+
+  # Set the EC2 access credentials (see below)
+  id: 'AKIAIHS54GSTSUBFXYCA'
+  key: 'KdIpXtfW0lAdtJSAFJ+HncrLRnbG/9FN2hl3o26+'
+
+  # SSH key used for the instance
+  # (Make sure this key is owned by root with permissions 0400
+  private_key: /etc/salt/pki/saltcloud-20160424.pem
+  keyname: saltcloud-20160424
+
+  # Security group and region
+  securitygroup: default
+
+  # Optionally configure default region
+  # Use salt-cloud --list-locations <provider> to obtain valid regions
+  #location: us-east-1
+  #availability_zone: us-east-1d
+
+  # User to use to run the deploy script
+  ssh_username: ubuntu
+
+  # Optionally add an IAM profile
+  #iam_profile: 'arn:aws:iam::563521116871:instance-profile/salt-cloud'
