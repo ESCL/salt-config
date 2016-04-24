@@ -1,5 +1,6 @@
+
 pjtracker-demo:
-  provider: ec2-public-wwww
+  provider: ec2-public-www
   size: t2.micro
   grains:
     app: pjtracker
@@ -13,7 +14,7 @@ pjtracker-shared:
     env: shared
 
 pjtracker-desicon:
-  provider: ec2-public-wwww
+  provider: ec2-public-www
   size: t2.micro
   grains:
     app: pjtracker
