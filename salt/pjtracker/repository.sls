@@ -10,6 +10,7 @@ pjtracker-repo:
     - target: {{ pillar['auth']['home'] }}/{{ pillar['app']['root'] }}
     - branch: {{ pillar['app']['repository']['branch'] }}
     - force_checkout: {{ pillar['app']['repository']['checkout'] }}
+    - force_reset: {{ pillar['app']['repository']['checkout'] }}
     - user: {{ pillar['auth']['user'] }}
     - require:
       - file: ssh-config
