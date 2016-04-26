@@ -6,6 +6,7 @@ app:
 
   repository:
     url: 'git@github.com:ESCL/pjtracker.git'
+    branch: develop
     checkout: false
 
   ports:
@@ -13,3 +14,5 @@ app:
     downstream: 80
 
   secure: false
+
+db: {}

@@ -1,4 +1,5 @@
 .idea
 .vagrant
-vagrant/key.*
-vagrant/minion
+/vagrant/key.*
+/vagrant/minion
+/wiki
