@@ -3,8 +3,8 @@ base:
   '*':
     - core.python
 
-  # Swap file (not used for dev)
-  'not G@env:dev':
+  # Swap file (only for ec2 machines)
+  'G@box_type:ec2':
     - match: compound
     - core.swap
 
