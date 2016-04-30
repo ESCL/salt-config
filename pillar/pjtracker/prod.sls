@@ -6,7 +6,7 @@ app:
 
   repository:
     url: 'git@github.com:ESCL/pjtracker.git'
-    branch: develop
+    branch: master
     checkout: true
 
   ports:

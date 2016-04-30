@@ -15,14 +15,14 @@ base:
     - match: compound
     - pjtracker.dev
 
-  'G@app:pjtracker and G@env:demo':
+  'G@app:pjtracker and G@env:prod':
     - match: compound
-    - pjtracker.demo
+    - pjtracker.prod
 
-  'G@app:pjtracker and G@env:shared':
+  'G@app:pjtracker and G@sub_env:shared':
     - match: compound
     - pjtracker.shared
 
-  'G@app:pjtracker and G@env:desicon':
+  'G@app:pjtracker and G@sub_env:desicon':
     - match: compound
     - pjtracker.desicon
