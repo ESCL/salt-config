@@ -3,19 +3,24 @@ pjtracker-demo:
   provider: ec2-public-www
   size: t2.micro
   grains:
+    box_type: ec2
     app: pjtracker
-    env: demo
+    env: prod
 
 pjtracker-shared:
   provider: ec2-public-www
   size: t2.medium
   grains:
+    box_type: ec2
     app: pjtracker
-    env: shared
+    env: prod
+    sub_env: shared
 
 pjtracker-desicon:
   provider: ec2-public-www
   size: t2.micro
   grains:
+    box_type: ec2
     app: pjtracker
-    env: desicon
+    env: prod
+    sub_env: desicon

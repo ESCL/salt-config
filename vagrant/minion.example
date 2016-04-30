@@ -8,7 +8,7 @@ id: dev-test1
 
 # Grains for minion (env and app)
 grains:
-  env: dev
   box_type: vagrant
   app: pjtracker
+  env: dev
   roles: []
