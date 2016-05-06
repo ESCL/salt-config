@@ -8,7 +8,7 @@ ec2-public-www:
 
   # Salt master host
   minion:
-    master: salt.pjtracker.com
+    master: devops.escng.com
 
   # Specify whether to use public or private IP for deploy script
   ssh_interface: public_ips
