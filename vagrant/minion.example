@@ -1,7 +1,7 @@
 # Salt minion configuration
 
 # URL of salt master (fqdn or ip)
-master: salt.pjtracker.com
+master: devops.escng.com
 
 # Minion id
 id: dev-test1
