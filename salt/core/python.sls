@@ -20,6 +20,6 @@ pip:
 
 pip-update:
   cmd.run:
-    - name: pip install -U pip
+    - name: pip install -U pip==8.1.1
     - require:
       - pkg: pip
