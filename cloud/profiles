@@ -5,7 +5,7 @@ pjtracker-demo:
   grains:
     box_type: ec2
     app: pjtracker
-    env: prod
+    env: qa
 
 pjtracker-shared:
   provider: ec2-public-www
