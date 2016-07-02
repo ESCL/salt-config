@@ -1,3 +1,5 @@
+# Development environment, for local dev/vagrant boxes
+
 app:
   name: pjtracker
   settings: 'tracker.settings.dev'
